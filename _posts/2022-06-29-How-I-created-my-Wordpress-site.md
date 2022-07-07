@@ -7,6 +7,8 @@ tags: homelab blog proxmox docker monitoring prometheus
 img_path: ../../images
 ---
 
+**UPDATE**: I now use Jekyll for my blog instead of WordPress. This new blog is deployed using Netlify rather than being self-hosted in my homelab. I'm leaving this article as is since it still has alot of useful information and because it was the firt blog I ever wrote.
+
 I thought it was only appropriate that my first blog post be about how I created this WordPress site. While I hope to make future blog posts short and sweet, this one is probably going to be a bit wordy as I talk about my my thought process and some of the issues I experienced along the way. I hope to look back on this some day and laugh.
 
 ### Hosting
