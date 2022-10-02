@@ -7,6 +7,8 @@ tags: homelab monitoring python
 img_path: ../../images
 ---
 
+**UPDATE 10/1/2022***: I found a better solution to running Glances persistently using a systemd unit file instead of `nohup`. I created new ansible automation to take advantage of this method. I will update this article accordingly in the near future.*
+
 There are many tools out there for monitoring the health of your infrastructure. None may be easier to set up and use than [Glances](https://glances.readthedocs.io/en/latest/index.html). It can be installed quickly and works great as a replacement for traditional tools like `top` and `htop` - but did you know its metrics can also be exported to tools like Prometheus and InfluxDB for better visualizations and aggregations? If not, then here's how I set up Glances to monitor all the servers in my homelab including my personal computers.
 
 ### Assumptions
