@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncing multiple Pi-Holes
-date: 2022-06-29 00:15 -0400
+date: 2023-03-27 00:15 -0400
 categories: homelab self-hosting, networking
 tags: homelab blog docker dns pi-hole
 ---
