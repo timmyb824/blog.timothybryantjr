@@ -28,7 +28,7 @@ BACKUP_USER=
 HOSTNAME=192.168.86.123
 
 # Optional username to connect to database as.  Will default to "postgres" if none specified.
-USERNAME=tbryant
+USERNAME=dbbackup
 PASSWORD=password123
 
 # This dir will be created if it doesn't exist.  This must be writable by the user the script is
@@ -249,6 +249,7 @@ function perform_backups()
 find $BACKUP_DIR -maxdepth 1 -mtime +$DAYS_TO_KEEP -name "*-daily" -exec rm -rf '{}' ';'
 
 perform_backups "-daily"
+
 curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/c6c4321-987a-423ss-23abdef-1234567890
 ```
 
@@ -317,4 +318,5 @@ This will run the script every day at 3pm and log the output to a file called `b
 
 ## Conclusion
 
-There are many ways to backup your PostgreSQL database, and you can use the method that works best for you. Many cloud providers offer managed PostgreSQL services that include automated backups, so you may not need to worry about backing up your database. However, if you are running your own PostgreSQL database, for example in a homelab environment like I am, then you should consider backing up your database regularly to protect against data loss. A bash script is a simple way to automate the process and cron can be used to schedule the script to run at regular intervals ensuring that your database is backed up regularly.
+There are many ways to backup your PostgreSQL database, and you can use the method that works best for you. Many cloud providers offer managed PostgreSQL services that include automated backups, so you may not need to worry about backing up your database. However, if you are running your own PostgreSQL database, for example in a homelab environment like I am, then you should consider backing up your database regularly to protect against data loss. A bash script is a simple way to automate the process and cron can be used to schedule the script to run at regular intervals ensuring that your database is backed up regularly. Not discussed here, but you should also consider backing up your database to a remote location to protect against data loss due to local hardware failure. I have a NAS that I use to store my backups, but you could also use a cloud storage provider like Amazon S3 or even an external hard drive.
+
