@@ -13,7 +13,7 @@ Orbital Sync is a tool that allows users to keep multiple Pi-hole instances in s
 
 ## Steps
 
-1) Install Orbital Sync on the primary Pi-hole instance: This can be done using docker or `node`. Docker is the recommended method, so I will be using that in this guide. Below is the `docker-compose` file I used to install Orbital Sync on my primary Pi-hole instance:
+1. Install Orbital Sync on the primary Pi-hole instance: This can be done using docker or `node`. Docker is the recommended method, so I will be using that in this guide. Below is the `docker-compose` file I used to install Orbital Sync on my primary Pi-hole instance:
 
 ```yaml
 version: '3'
@@ -45,7 +45,7 @@ The configuration is fairly straightforward but a few things to call out:
 - `INTERVAL_MINUTES` is set to 60 minutes. This means that Orbital Sync will check for updates every 60 minutes and push them to the secondary Pi-Hole instance if there are any.
 - I'm using gmail to receive notifications (`SMTP_HOST`, `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_TO`). This is optional, but it can be useful to know if there are any issues with the synchronization.
 
-2) Run the container: Once the `docker-compose` file is created, you can run the container using the following command: `docker-compose up -d`. This will start the container and it will begin checking for updates every 60 minutes. The output (`docker-compose logs -f`) will look something like this:
+2. Run the container: Once the `docker-compose` file is created, you can run the container using the following command: `docker-compose up -d`. This will start the container and it will begin checking for updates every 60 minutes. The output (`docker-compose logs -f`) will look something like this:
 
 ```bash
 orbital-sync  | 3/27/2023, 1:38:10 PM: ➡️ Signing in to http://192.168.86.10/admin...
@@ -78,7 +78,7 @@ orbital-sync  | 3/27/2023, 1:39:26 PM: Waiting 60 minutes...
 
 If you run into any issues, the logs will provide more information about what went wrong. I ran into a few issues when I first set this up, but I was able to resolve them by checking the logs.
 
-3) Verify the synchronization: Finally, you can verify that the Pi-hole instances are synchronized by checking the blocklists or DNS records on each instance. If everything is working properly, the values should be identical on each Pi-hole instance.
+3. Verify the synchronization: Finally, you can verify that the Pi-hole instances are synchronized by checking the blocklists or DNS records on each instance. If everything is working properly, the values should be identical on each Pi-hole instance.
 
 ## Conclusion
 
