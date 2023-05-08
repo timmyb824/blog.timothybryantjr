@@ -21,3 +21,6 @@ node_modules
 package-lock.json
 
 notes.md
+
+# Local Netlify folder
+.netlify
