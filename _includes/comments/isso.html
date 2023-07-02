@@ -1,4 +1,35 @@
-<script data-isso="//isso-comments.timmybtech.com/" src="//isso-comments.timmybtech.com/js/embed.min.js"></script>
+<script data-isso="//isson-comments.tld/" src="//isso-comments.tld/js/embed.min.js"></script>
 <section id="isso-thread">
     <noscript>Javascript needs to be activated to view comments.</noscript>
 </section>
+
+
+<!-- for lazy loading, use this (just an example from docs): -->
+<!-- <script type="text/javascript">
+    // Lazy-load isso only when page end is in view
+    function loadIsso() {
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        script.setAttribute("src", "/prefix/js/embed.min.js");
+        // add relevant data-isso attributes here
+        script.setAttribute("data-isso", "/prefix/");
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+    let offset = 50; // Start loading 50px before reaching bottom
+    function scrollBottomListener(ev) {
+        if ((window.scrollY + window.innerHeight)
+                >= (document.documentElement.scrollHeight - offset)) {
+            loadIsso();
+            window.removeEventListener('scroll', scrollBottomListener);
+        }
+    }
+    window.onload = function() {
+      // If viewport >= page height, load immediately
+      if ((window.scrollY + window.innerHeight)
+                >= (document.documentElement.scrollHeight - offset)) {
+          loadIsso();
+      } else {
+          window.addEventListener('scroll', scrollBottomListener);
+      }
+    }
+</script> -->
