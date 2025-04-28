@@ -1,5 +1,7 @@
 # Timmyb's Tech Blog
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b6bff119-edb1-4029-971f-66546ebc6089/deploy-status)](https://app.netlify.com/sites/timmybs-tech-blog/deploys)
+
+> [!NOTE]  
+> I've combined my blog and personal website into one app found here [timothybryantjr.com](https://github.com/timmyb824/timothybryantjr.com)
 
 ## Credits
 
